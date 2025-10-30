@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>St Joseph's Hill SS Kyembogo - Header</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet" />
+  <style>
+    body {
+        margin: 0;
+        font-family: 'Cinzel Decorative', cursive;
+        color: white;
+        background-image: url("WEB BACK.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+      }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: -1;
+    }
+
+    header {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 40px;
+      font-weight: bold;
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    header h1 {
+      flex: 1;
+      text-align: center;
+      margin: 0;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+      animation: colorCycle 5s linear infinite;
+    }
+
+    .logo {
+      max-height: 100px;
+      max-width: 120px;
+      object-fit: contain;
+    }
+
+    @keyframes colorCycle {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    nav a {
+      color: cyan;
+      text-decoration: none;
+      font-size: 18px;
+      margin: 0 10px;
+      background: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      background: lightblue;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 20px auto;
+      background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+      border-radius: 15px;
+      box-shadow: 0 0 20px cyan;
+    }
+
+    section {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      color: white;
+    }
+
+    section.show {
+      display: block !important;
+      opacity: 1 !important;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: cyan;
+      text-shadow: 0 0 5px #0ff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      border: 1px solid #0ff;
+      padding: 10px;
+      text-align: left;
+      color: #0ff;
+    }
+
+    th {
+      background-color: rgba(0, 123, 255, 0.7);
+      font-weight: bold;
+    }
+
+    /* Sports images */
+    .sports-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .sports-images div {
+      text-align: center;
+      margin: 15px;
+      background: rgba(0, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 10px;
+      box-shadow: 0 0 15px cyan;
+    }
+
+    .sports-images img {
+      width: 180px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .sports-images img:hover {
+      transform: scale(1.1);
+    }
+    .sports-images img{
+      BASKET BALL .png
+    width: 180px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .sports-images p {
+      color: cyan;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    #register form {
+      max-width: 400px;
+      margin: 0 auto;
+      background: rgba(0, 255, 255, 0.15);
+      padding: 20px 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px cyan;
+      font-family: 'Cinzel Decorative', cursive;
+    }
+
+    #register label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: cyan;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    #register input[type="text"],
+    #register input[type="number"],
+    #register input[type="date"],
+    #register textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-family: 'Cinzel Decorative', cursive;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      box-shadow: 0 0 8px cyan inset;
+      transition: box-shadow 0.3s ease;
+    }
+
+    #register input[type="text"]:focus,
+    #register input[type="number"]:focus,
+    #register input[type="date"]:focus,
+    #register textarea:focus {
+      box-shadow: 0 0 15px cyan;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    #register textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    #register input[type="submit"] {
+      background: cyan;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    #register input[type="submit"]:hover {
+      background: #0bb;
+      color: white;
+    }
+
+    .signin-form {
+      max-width: 400px;
+      margin: 20px auto 0 auto;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px cyan;
+      color: white;
+      font-family: 'Cinzel Decorative', cursive;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 12px 12px 12px 10px;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #0ff;
+      color: white;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .form-group label {
+      position: absolute;
+      left: 10px;
+      top: 14px;
+      color: #0ff;
+      font-size: 16px;
+      pointer-events: none;
+      transition: 0.3s ease all;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label {
+      top: -10px;
+      font-size: 12px;
+      color: cyan;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      margin-right: 10px;
+      width: auto;
+      accent-color: cyan;
+      cursor: pointer;
+    }
+
+    .google-btn {
+      background: #db4437;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 25px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .google-btn:hover {
+      background: #c23321;
+    }
+
+    .submit-btn {
+      background: cyan;
+      color: black;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 20px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      letter-spacing: 1.5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: #0bb;
+      color: white;
+    }
+
+    .project-tab {
+  position: fixed;
+  bottom: 60px;
+  left: 10px;
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+  box-shadow: 0 0 15px cyan;
+  z-index: 1000;
+}
+
+.project-info {
+  display: none;
+  position: fixed;
+  bottom: 120px;
+  left: 20px;
+  background-image: url("ChatGPT Image Oct 20, 2025, 07_04_07 AM.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 320px;
+  box-shadow: 0 0 20px cyan;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 999;
+  user-select: none;
+  margin: 10px;
+  border: 2px solid cyan;
+}
+
+.project-info h3, 
+.project-info p {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+      user-select: none;
+      box-shadow: 0 0 15px cyan;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        font-size: 24px;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .sports-images img {
+        width: 120px;
+      }
+    }
+  </style>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => {
+        sec.classList.remove('show');
+        sec.style.display = 'none';
+      });
+      const section = document.getElementById(id);
+      section.style.display = 'block';
+      setTimeout(() => section.classList.add('show'), 10);
+    }
+
+    function toggleProjectInfo() {
+      const info = document.getElementById('project-info');
+      if (!info) return;
+      if (info.style.display === 'block') {
+        info.style.opacity = '0';
+        setTimeout(() => info.style.display = 'none', 500);
+      } else {
+        info.style.display = 'block';
+        info.style.opacity = '1';
+        setTimeout(() => {
+          info.style.opacity = '0';
+          setTimeout(() => info.style.display = 'none', 500);
+        }, 5000);
+      }
+    }
+  </script>
+</head>
+
+<body onload="showSection('welcome')">
+  <header>
+    <img src="logo.png" alt="Logo" class="logo" />
+    <h1>ST JOSEPH'S HILL SS KYEMBOGO</h1>
+  </header>
+
+  <nav>
+    <a onclick="showSection('welcome')">Welcome</a>
+    <a onclick="showSection('education')">Education</a>
+    <a onclick="showSection('sports')">Sports</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('register')">Register</a>
+    <a onclick="showSection('signin')">Sign In</a>
+  </nav>
+
+  <main>
+    <section id="welcome" class="show">
+      <h2>Welcome to St Joseph's Hill SS Kyembogo</h2>
+      <p><strong>Motto:</strong> Education is Light</p>
+      <p>Supported by the Brothers and Priests of the Holy Cross.</p>
+    </section>
+
+    <section id="education">
+      <h2>Subjects Offered</h2>
+      <p><strong>Sciences:</strong> Physics, Chemistry, Biology, Mathematics, Computer Studies</p>
+      <p><strong>Arts:</strong> History, Geography, CRE, Literature, Fine Art, Kiswahili, Economics, Entrepreneurship, Subsidiary ICT, Divinity</p>
+    </section>
+
+    <!-- ✅ Updated Sports Section -->
+    <section id="sports">
+      <h2>Sports at St Joseph's Hill SS Kyembogo</h2>
+      <ul>
+        <li>Basketball</li>
+        <li>Football</li>
+        <li>Volleyball</li>
+        <li>Netball</li>
+        <div>
+          <img src="FOOTBALL.jpg" alt="Football Team" />
+          <p>Football Team</p>
+        </div>
+        <div>
+          <img src="NET BALL.jpg" alt="Netball Team" />
+          <p>Netball Team</p>
+        </div>
+        <div>
+          <img src="BASKET BALL.jpg" alt="Basketball Team" />
+          <p>Basketball Team</p>
+        </div>
+        <div>
+          <img src="VOLLEY BALL.jpg" alt="Volleyball Team" />
+          <p>Volleyball Team</p>
+        </div>      
+          <p>Volleyball Team</p>
+        </div>      
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About the School</h2>
+      <p><strong>School Motto:</strong> Education is Light</p>
+      <p><strong>Slogan:</strong> Making a Difference</p>
+      <p><strong>Values:</strong> Integrity, Faith, Truth, Love, Prayer, Trust in God, Truth, and Service</p>
+      <p><strong>Background:</strong> St Joseph's Hill SS is a Catholic founded school sponsored by priests and brothers of the Congregation of Holy Cross, operating in Kyarusozi Catholic Parish, Fort Portal Diocese. The school was established in 1996 and is fully registered by the Ministry of Education and Sports. The school is both day and boarding.</p>
+      <p><strong>Location:</strong> The school is located 23km off Fort-Portal-Kampala highway from Rugombe Town Council. It is situated in Kyembogo Sub-county in Kyenjojo District.</p>
+      <p><strong>School Vision:</strong> Educate the youth to be useful citizens in society.</p>
+      <p><strong>School Mission:</strong> To provide a well-balanced education and promote quality job makers and leaders.</p>
+    </section>
+
+    <section id="register">
+      <h2>Student Registration</h2>
+      <form onsubmit="event.preventDefault(); alert('Form submitted!');">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="class">Class:</label>
+        <input type="text" id="class" name="class" required />
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="5" max="25" required />
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required />
+
+        <label for="results">Results:</label>
+        <textarea id="results" name="results" required></textarea>
+
+        <input type="submit" value="Register" />
+      </form>
+    </section>
+
+    <section id="signin">
+      <h2>Sign In</h2>
+      <button onclick="alert('Google Sign-In Mock')" class="google-btn">Sign In with Google</button>
+      <form onsubmit="event.preventDefault(); alert('Signed in!');" class="signin-form">
+        <div class="form-group">
+          <input type="email" id="email" placeholder=" " required />
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" placeholder=" " required />
+          <label for="password">Password</label>
+        </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="robot" required />
+          <label for="robot">I'm not a robot</label>
+        </div>
+        <button type="submit" class="submit-btn">Sign In</button>
+      </form>
+    </section>
+  </main>
+
+  <div class="project-tab" onclick="toggleProjectInfo()" title="Click to toggle Project Info">
+  Project Info
+</div>
+
+<div id="project-info" class="project-info">
+  <h3>Project Information</h3>
+  <p>This site was created by <b>Kijaara Jeremiah</b>.</p>
+  <p>S.3 CLASS</p>
+  <p>2025</p>
+  <p>Contact: kijaarajerry@gmail.com</p>
+</div>
+
+  <footer style="background-color: #007BFF; color: yellow; text-align: center; padding: 15px; font-weight: bold; font-size: 16px; box-shadow: 0 -2px 10px cyan;">
+    &copy; 2025 St Joseph's Hill SS Kyembogo | Designed by Kijaara Jeremiah
+    <div style="color: #ADD8E6; font-weight: normal; font-size: 14px; margin-top: 5px;">
+      Powered by Holy Cross | Contact: kijaarajerry@gmail.com
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
